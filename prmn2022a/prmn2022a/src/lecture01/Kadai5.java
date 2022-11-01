@@ -5,7 +5,7 @@ public class Kadai5 {
         // 5人分の、算数のテストの成績
         int[] score = {41, 85, 72, 38, 80};
 
-        // 合否を判定
+        // 成績を判定
         for (int i = 0; i < 5; i++) {
             if (score[i] < 60) {
                 System.out.println(i + "番 " + score[i] + "点 不可");
