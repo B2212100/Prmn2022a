@@ -1,6 +1,6 @@
 package lecture01;
 
-public class kadai1_1 {
+public class Kadai1 {
     public static void main(String[] args) {
         // 自分の学籍番号、名前を表示
         String number = "B2212100";
