@@ -10,6 +10,7 @@ public class Human {
     }
 
     void print() {
+
         if (age <= 18) {
             System.out.println(this.name + " (生徒) " + this.age + "歳");
         } else if (age <= 22) {
