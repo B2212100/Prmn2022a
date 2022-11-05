@@ -3,8 +3,14 @@ package lecture02;
 public class Car {
     int fuel;
 
-    Car() {
+    // 課題3
+    Tire[] tires;
+    Engine engine;
+
+    Car(Tire[] tires, Engine engine) {
         this.fuel = 0;
+        this.tires = tires;
+        this.engine = engine;
     }
 
     void run() {
@@ -16,5 +22,9 @@ public class Car {
         }
         System.out.println("fuel = " + this.fuel);
         return;
+    }
+
+    void startEngine() {
+        this.engine.start();
     }
 }
