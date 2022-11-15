@@ -11,7 +11,7 @@ public class Exercise3_2 {
         // 何行分の文字列を入力するか
         System.out.print("何行分入力しますか？\n>");
         int how_many_lines = scanner.nextInt();
-        scanner.nextLine();
+        scanner.nextLine(); // 改行コードを空読み
 
         // 指定された行数分入力
         for (int i = 0; i < how_many_lines; i++) {
