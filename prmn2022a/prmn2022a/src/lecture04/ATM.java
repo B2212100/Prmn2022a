@@ -22,8 +22,9 @@ public class ATM {
 
     public boolean existsAccount(String name, String number) {
         // 引数のname,numberから、accountListに存在するかを返す
+        // 拡張for文
         for (Account account1 : accountList) {
-            if (account1.name.equals(name) && account1.number.equals(number)) {
+            if (account1.getName().equals(name) && account1.getNumber().equals(number)) {
                 return true;
             }
         }   // containsメソッドは、文字列がオブジェクトに含まれていなく、うまくいかなかった
@@ -34,9 +35,9 @@ public class ATM {
         // 引数のnumberが存在するなら入金
 
         for (Account account1 : accountList) {
-            if (account1.number.equals(number)) {
+            if (account1.getNumber().equals(number)) {
                 System.out.println("口座番号:" + number + " に " + money + " 円 入金しました。\n");
-                account1.balance += money;
+                account1.setSumBalance(money);
                 return;
             }
         }
@@ -49,14 +50,15 @@ public class ATM {
         // ただし、残高が足りない場合は行えない
 
         for (Account account1 : accountList) {
-            if (account1.number.equals(number)) {
-                if (account1.balance > money) {
+            if (account1.getNumber().equals(number)) {
+                if (account1.getBalance() > money) {
                     System.out.println("口座番号:" + number + " から " + money + " 円 引き出しました。");
-                    account1.balance -= money;
+                    account1.setDifBalance(money);
+
                 } else {
                     System.out.println("口座番号:" + number + " から " + money + " 円 引き出せませんでした。");
                 }
-                return account1.balance;
+                return account1.getBalance();
             }
         }
 

@@ -31,7 +31,7 @@ public class Exercise4_2 {
         long zandaka = atm.withdraw(number, 2000);
         System.out.println("残高:" + zandaka + " 円です。\n");
 
-        // 残高表示はここでするべきか
+        // 残高表示はここでするべきか、返り値がある
 
         // 引き出し(成功例)
         zandaka = atm.withdraw(number, 500);
