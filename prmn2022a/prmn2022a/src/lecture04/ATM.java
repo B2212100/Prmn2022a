@@ -6,16 +6,16 @@ import java.util.ArrayList;
 public class ATM {
 
     // AccountはATMに集約
-    private List<Account> accountList = new ArrayList<>();
+    private List<Account> accountList;
 
     // コンストラクタ
     public ATM() {
-        List<Account> accountList = new ArrayList<>();
+        accountList = new ArrayList<>();
     }
 
     public void registerAccount(String name, String number) {
         // アカウントを登録
-        accountList.add(new Account(name, number));
+        this.accountList.add(new Account(name, number));
         System.out.println(name + " さんのアカウントを口座番号:" + number + " で登録しました。\n");
         return;
     }
