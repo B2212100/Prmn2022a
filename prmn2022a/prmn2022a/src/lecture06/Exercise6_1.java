@@ -3,7 +3,7 @@ package lecture06;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-// 想定される値が入力されなかった場合の例外処理
+// 課題6-1 想定される値が入力されなかった場合の例外処理
 public class Exercise6_1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
